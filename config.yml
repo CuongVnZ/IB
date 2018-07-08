@@ -1,0 +1,53 @@
+#MySQL
+MySQL:
+  Prefix: backup_
+  Host: localhost
+  Port: 3306
+  Name: database
+  Password: ''
+  User: 'root'
+Cmd:
+  name: "backup"
+  permission: "command.backup"
+  aliases:
+  - "bac"
+Backup:
+  player: "Your inventory was restored by {P} from {DATE}"
+  ender: "Your enderchest was restored by {P} from {DATE}"
+  Max: 30
+  Name: '&aList &cBakckups'
+  DataLore: '    &aData: '
+  NameLore: '    &aNick: '
+  NameB: '&cBackup'
+  Lore:
+  - "&8[&a*&8]&a----[&cBackup&a]----&8[&a*&8]"
+  - "    &aNick: {NAME}"
+  - "    &aData: {DATE}"
+  - "    &aReason: {REASON}"
+  - "&8[&a*&8]&a----[&cBackup&a]----&8[&a*&8]"
+Items:
+  Name: '&aItems'
+  DataLore: '    &aData: '
+  NameLore: '    &aNick: '
+  NameR: '&cRestore' 
+  Lore:
+  - "&8[&a*&8]&a----[&cBackup&a]----&8[&a*&8]"
+  - "    &aClick to restore"
+  - "    &aNick: {NAME}"
+  - "    &aData: {DATE}"
+  - "    &aReason: {REASON}"
+  - "&8[&a*&8]&a----[&cBackup&a]----&8[&a*&8]"
+Create:
+  Death:
+    Enable: false
+    Message: "&cBackup was created!"
+  Task:
+    Enable: true
+    Time: 60
+    Message: "&cBackup was created!"
+Command:
+  Usage: "&6Usage: &c/backup <info/create> <nick | all/nick>"
+  MessageAll: "&cBackup was created!"
+  MessagePlayer: "&cBackup was created!"
+  Createby: "&cBackup has created by {NAME}!"
+  PlayerIsOffline: "&cPlayer is offline!"
