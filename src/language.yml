@@ -1,0 +1,40 @@
+Messages:
+  Menu: "$b--        Connect Four        --\n\n$e/connectfour queue\n$e/connectfour accept\n$e/connectfour invite\n$e/connectfour stats\n$b--        Connect Four        --"
+  Stats: "$b--        Connect Four        --\n\n$6Wins: $a%WINS%\n$6Losses: $a%LOSSES%\n\n$b--        Connect Four        --"
+  Game:
+    Tie: "$a$lGame ended in a tie!"
+    Win: "$a$l%PLAYER% $ewins!"
+    Exit:
+      Loss: 
+        Quitter: "$eYou have exited the game and have been given a loss!"
+        Player: "$c%PLAYER% $ehas exited the game and received a loss!"
+      NoLoss: 
+        Quitter: "$aYou $ehave exited the game!"
+        Player: "$c%PLAYER%$e has exited the game!"
+  Invites:
+    Queue:
+      Join: $eYou have joined the queue! %SIZE% In Queue
+      Quit: $cYou have left the queue!
+    Tip: "$eInvite $c%PLAYER%$e to a game with $c/connectfour invite %PLAYER%$e!"
+    Success: "$eYou have invited $a%PLAYER%$e to play ConnectFour!"
+    Receive: "$eYou have been invited to play Connect Four! Accept with $c/connectfour accept %PLAYER%$e, the invite will expire in %TIME% seconds!"
+    Error:
+      Expired:
+        Player: "$e%PLAYER%s invite has expired!"
+        Invited: "$eYour invite from %PLAYER% has expired!"
+      NotFound: "$eCouldnt find that player!"
+      SelfInvite: "$eYou can't invite yourself to a game!"
+      AlreadyInvited: "$e%PLAYER% has already been invited!"
+      InGame: "$e%PLAYER% is already in a game!"
+  Items:
+    WinningMove: "$bWinning Move!"
+    Exit: 
+      Title: "$a$lExit"
+      Description: "Click to exit"
+    EmptyPane: "$eEmpty"
+    Red:
+      Turn: "$cReds Turn"
+      Pane: "$cRed"
+    Blue:
+      Turn: "$bBlues Turn"
+      Pane: "$bBlue"

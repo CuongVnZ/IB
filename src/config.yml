@@ -1,0 +1,24 @@
+Game:
+  Sounds: true
+  Stats: true
+  Screen:
+    Title: $9Connect Four!
+  Commands:
+    Enabled: true
+    Execute:
+    - give %PLAYER1% diamond 5
+    - say %PLAYER1% has won ConnectFour against %PLAYER2%!
+MySQL:
+   Enabled: false
+   Host: localhost
+   User: root
+   Password: ''
+   Port: 3306
+   DBName: ConnectFour
+Invites:
+  Queue:
+    Enabled: true
+  Time: 30
+  Menu:
+    Enabled: true
+    Title: $6$lInvite Menu

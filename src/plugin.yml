@@ -1,0 +1,11 @@
+name: ConnectFour
+main: pl.nora.ConnectFour.ConnectFour
+version: 1.0
+description: ConnectFour
+author: nora
+commands:
+   connectfour:
+      permission: connectfour.play
+      permission-message: No Permission!
+      description: Connect Four Game
+      aliases: [cf, cnf]
