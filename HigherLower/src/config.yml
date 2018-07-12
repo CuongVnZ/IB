@@ -1,0 +1,177 @@
+#########################
+#H-I-G-H-E-R---L-O-W-E-R#
+#########################
+#
+# Welcome to this HigherLower recode
+# 
+# NOTE: For all material names go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# NOTE2: For all sound names go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+#
+
+# General settings:
+
+Money: false
+# Valid types are false or true, this means the plugin will check for vault or not.
+
+Delay: 60
+# Set to -1 to disable
+
+MaximumNumber: 100
+
+# Money settings:
+
+DefaultBet: 500
+
+MaximumBet: 1000
+
+MinimumBet: 10
+
+ProcentWin: 20
+
+# Messages:
+
+NotAPlayer: '&7[&c&lError&7]: You need to be a player in order to execute this command!'
+
+NoPermissions: '&7[&c&lError&7]: You dont have the permissions to execute this command!'
+
+CantGoHigher: '&7[&c&lError&7]: You cant bid any higher!'
+
+CantGoLower: '&7[&c&lError&7]: You cant bid any lower!'
+
+LostMoney: '&7[&a&lHigherLower&7]: Oh no! You lost your money!'
+
+MoneyWon: '&7[&a&lHigherLower&7]: Congratulations! You won %b%'
+
+Won: '&7[&a&lHigherLower&7]: Congratulations! You won %b% times!'
+
+NotEnoughBalance: '&7[&c&lError&7]: Your balance is not high enough to start playing!'
+
+InCooldown: '&7[&c&lError&7]: You are still in cooldown for %b% seconds!'
+
+UnknownArgument: '&7[&c&lError&7]: The argument you specified is unknown!'
+
+# Permissions:
+
+HigherLowerOpenPermission: 'higher.lower'
+# Permission to do /higherlower
+
+HigherLowerDelayOverridePermission: 'no.delay'
+# Permission to deny the given delay
+
+ReloadPermission: 'higherlower.reload'
+# Permission to reload the configuration file
+
+# Sound settings:
+
+BetSound: 'BLOCK_ANVIL_BREAK'
+
+WinSound: 'ENTITY_WITHER_SHOOT'
+
+LoseSound: 'ENTITY_WITHER_HURT'
+
+# Bet GUI settings (Only works if money is true):
+
+BetGUITitle: '&cBetGUI'
+
+BetTiles:
+  1:
+    Name: '&c-100'
+    Value: -100
+    Lore:
+      - '&cClick here to delete 500'
+      - '&cFrom your bet'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 3
+  2:
+    Name: '&c-10'
+    Value: -10
+    Lore:
+      - '&cClick here to delete 10'
+      - '&cFrom your bet'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 3
+  3:
+    Name: '&c-1'
+    Value: -1
+    Lore:
+      - '&cClick here to delete 1'
+      - '&cFrom your bet'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 3
+  4:
+    Name: '&a+1'
+    Value: 1
+    Lore:
+      - '&aClick here to add 1'
+      - '&ato your bet'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 3
+  5:
+    Name: '&a+10'
+    Value: 10
+    Lore:
+      - '&aClick here to add 10'
+      - '&ato your bet'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 3
+  6:
+    Name: '&a+100'
+    Value: 100
+    Lore:
+      - '&aClick here to add 100'
+      - '&ato your bet'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 3
+  fill:
+    Name: '&4Click to confirm bet!'
+    Lore:
+      - '&4Click here to confirm your bet'
+      - '&4your bet is %b%'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 8
+  # fill will also act as a confirm button
+  info:
+    Name: '&cYour bet is %b%'
+    Lore:
+      - '&4Your bet is %b%!'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 8
+    
+# Higher Lower GUI settings:
+
+HigherLowerGUITitle: '&aHigherLowerGUI'
+
+HigherLowerTiles:
+  higher:
+    Name: '&aHigher'
+    Lore:
+      - '&aDo you think the next number'
+      - '&awill be higher than %b%'
+      - '&aclick me!'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 5
+  lower:
+    Name: '&cLower'
+    Lore:
+      - '&cDo you think the next number'
+      - '&cwill be lower than %b%'
+      - '&cclick me!'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 14
+  fill:
+    Name: '&r'
+    Lore:
+      - '&r'
+    Item: 'STAINED_GLASS_PANE'
+    Amount: 1
+    Durability: 8

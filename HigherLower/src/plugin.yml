@@ -1,0 +1,9 @@
+name: HigherLower
+version: 1.0
+main: pl.nora.higherlower.HigherLower
+description: The HigherLower game packed in a GUI
+
+commands:
+  higherlower:
+    usage: /<command>
+    aliases: [hl]
